@@ -16,7 +16,7 @@ func main() {
 
 	router := httprouter.New()
 	router.GET("/todos", webHandler.List)
-	router.POST("/todos", webHandler.Add)
+	router.POST("/todos", webHandler.Push)
 	router.DELETE("/todos", webHandler.Pop)
 
 	host := "localhost:8888"

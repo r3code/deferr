@@ -6,6 +6,9 @@ import (
 	"github.com/nu7hatch/gouuid"
 )
 
+// ensure TodoManager implements TodoInteractor interface
+var _ TodoInteractor = &TodoManager{}
+
 type TodoManager struct {
 	todoRepo TodoAdapter
 }

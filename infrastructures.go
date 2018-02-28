@@ -4,6 +4,10 @@ import (
 	"fmt"
 )
 
+
+// ensure StoreHandler implements Storage interface
+var _ Storage = &StoreHandler{}
+
 type StoreHandler struct {
 	Items []interface{}
 }
